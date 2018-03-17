@@ -114,7 +114,18 @@ class Math {
 
     /** Returns the integer part of the square root of x. */
     function int sqrt(int x) {
-      return 0;
+      var int n, y, low;
+
+      let n = 7;
+      while (~(n < 0)) {
+        let low = ((y + twoToThe[n]) * (y + twoToThe[n]));
+        if (((low < x) | (low = x)) & (low > 0)) {
+          let y = y + twoToThe[n];
+        }
+        let n = n - 1;
+      }
+
+      return y;
     }
 
     /** Returns the greater number. */
