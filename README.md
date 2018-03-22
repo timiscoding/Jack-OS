@@ -28,4 +28,4 @@ A library/OS written in the Jack language that provides services such as math, m
 * **printString(String s)** - displays the string at the current position and advances the cursor to the end of the string
 * **printInt(int i)** - displays the integer at the current cursor and advances the cursor to the end
 * **printLn()** - moves the cursor to the next line. wraps back to the beginning
-* **printBackspace()** - moves the cursor back one column. Stops when cursor is at top left position
+* **backSpace()** - moves the cursor back one column. Stops when cursor is at top left position

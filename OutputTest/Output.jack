@@ -22,6 +22,7 @@ class Output {
   static int cursorCol; // curosr col position
   static int ASCII_0;
   static int ASCII_HYPHEN;
+  static int ASCII_BLANK;
 
   /** Initializes the screen, and locates the cursor at the screen's top-left. */
   function void init() {
@@ -30,6 +31,7 @@ class Output {
     let cursorCol = 0;
     let ASCII_0 = 48;
     let ASCII_HYPHEN = 45;
+    let ASCII_BLANK = 32;
     do Output.initMap();
     return;
   }
@@ -187,12 +189,21 @@ class Output {
   function void moveCursor(int i, int j) {
     let cursorRow = i;
     let cursorCol = j;
+
+    do Output.print(ASCII_BLANK);
     return;
   }
 
   /** Displays the given character at the cursor location,
     *  and advances the cursor one column forward. */
   function void printChar(char c) {
+    do Output.print(c);
+    do Output.advanceCursor();
+    return;
+  }
+
+  /** Displays the given character at the cursor location */
+  function void print(char c) {
     var int addr, word, evenIndex, bitmask, i;
     var Array charMap;
 
@@ -216,8 +227,6 @@ class Output {
       let addr = addr + 32;
       let i = i + 1;
     }
-
-    do Output.advanceCursor();
     return;
   }
 
@@ -298,6 +307,8 @@ class Output {
         let cursorRow = cursorRow - 1;
       }
     }
+
+    do Output.moveCursor(cursorRow, cursorCol);
     return;
   }
 }
