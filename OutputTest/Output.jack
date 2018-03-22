@@ -22,7 +22,7 @@ class Output {
   static int cursorCol; // curosr col position
   static int ASCII_0;
   static int ASCII_HYPHEN;
-  static int ASCII_BLANK;
+  static int ASCII_SPACE;
 
   /** Initializes the screen, and locates the cursor at the screen's top-left. */
   function void init() {
@@ -31,7 +31,7 @@ class Output {
     let cursorCol = 0;
     let ASCII_0 = 48;
     let ASCII_HYPHEN = 45;
-    let ASCII_BLANK = 32;
+    let ASCII_SPACE = 32;
     do Output.initMap();
     return;
   }
@@ -190,7 +190,7 @@ class Output {
     let cursorRow = i;
     let cursorCol = j;
 
-    do Output.print(ASCII_BLANK);
+    do Output.print(ASCII_SPACE);
     return;
   }
 
