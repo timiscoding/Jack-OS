@@ -21,3 +21,11 @@ A library/OS written in the Jack language that provides services such as math, m
 * **drawLine(int x1, int y1, int x2, int y2)** - draws a line from (x1, y1) to (x2, y2)
 * **drawRectangle(int x1, int y1, int x2, int y2)** - draws a rectangle from top left (x1, y1) to bottom right (x2, y2)
 * **drawCircle(int x, int y, int radius)** - draws a circle centered at (x, y) with radius
+
+### Output
+* **moveCursor(int i, int j)** - moves the cursor to the ith row and jth column and erases the character currently displayed there
+* **printChar(char c)** - displays the character at the current position and advances the cursor by one column
+* **printString(String s)** - displays the string at the current position and advances the cursor to the end of the string
+* **printInt(int i)** - displays the integer at the current cursor and advances the cursor to the end
+* **printLn()** - moves the cursor to the next line. wraps back to the beginning
+* **printBackspace()** - moves the cursor back one column. Stops when cursor is at top left position

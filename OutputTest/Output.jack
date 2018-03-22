@@ -282,7 +282,6 @@ class Output {
     let cursorCol = 0;
     if (cursorRow < 22) {
       let cursorRow = cursorRow + 1;
-
     } else {
       let cursorRow = 0;
     }
