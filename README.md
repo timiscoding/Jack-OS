@@ -29,3 +29,9 @@ A library/OS written in the Jack language that provides services such as math, m
 * **printInt(int i)** - displays the integer at the current cursor and advances the cursor to the end
 * **println()** - moves the cursor to the next line. wraps back to the beginning
 * **backSpace()** - moves the cursor back one column. Stops when cursor is at top left position
+
+### Keyboard
+* **keyPressed()** - returns the character of the key currently pressed. Returns 0 if none pressed
+* **readChar()** - waits for a key to be pressed and returns the character
+* **readLine(String message)** - displays _message_ and reads keyboard input until a new line key is detected, then returns the string. Handles backspaces
+* **readInt(String messsage)** - same as _readLine()_ but parses the string for an integer and returns it. Stops on the first non-digit character

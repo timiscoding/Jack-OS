@@ -86,6 +86,7 @@ class Keyboard {
           }
         }
       }
+      Output.println();
       return str;
     }
 
