@@ -81,12 +81,14 @@ class Keyboard {
           do str.eraseLastChar();
           do Output.backSpace();
         } else {
-          if ((c > 31) & (c < 127)) {
+          if ((str.length() < 50) & (c > 31) & (c < 127)) {
             do str.appendChar(c);
+          } else { // character buffer full
+            do Sys.error(1000);
           }
         }
       }
-      Output.println();
+      do Output.println();
       return str;
     }
 
