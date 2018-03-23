@@ -53,3 +53,8 @@ A library/OS written in the Jack language that provides services such as math, m
 ### Array
 * **new(int size)** - returns a new array given the size
 * **dispose()** - disposes this array
+
+### Sys
+* **halt()** - halts program execution
+* **wait(int ms)** - waits approx ms milliseconds and returns
+* **error(int code)** - prints the error code and halts
