@@ -35,3 +35,17 @@ A library/OS written in the Jack language that provides services such as math, m
 * **readChar()** - waits for a key to be pressed and returns the character
 * **readLine(String message)** - displays _message_ and reads keyboard input until a new line key is detected, then returns the string. Handles backspaces
 * **readInt(String messsage)** - same as _readLine()_ but parses the string for an integer and returns it. Stops on the first non-digit character
+
+### String
+* **new(int maxLength)** - returns a new string of max length and initial length 0
+* **dispose()** - disposes this string
+* **length()** - return the current length of the string
+* **charAt(int j)** - return the character at position j
+* **setCharAt(int j, char c)** - set the character c at position j
+* **appendChar(char c)** - appends the character to the end of the string and returns the string
+* **eraseLastChar()** - removes the last character from this string
+* **intValue()** - parse this string for an integer. Stops on first non-digit
+* **setInt(int i)** - sets the string to the string representation of an integer
+* **String.newLine()** - returns the new line character
+* **String.backSpace()** - returns the backspace character
+* **String.doubleQuote()** - returns the double quote character
