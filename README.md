@@ -49,3 +49,7 @@ A library/OS written in the Jack language that provides services such as math, m
 * **String.newLine()** - returns the new line character
 * **String.backSpace()** - returns the backspace character
 * **String.doubleQuote()** - returns the double quote character
+
+### Array
+* **new(int size)** - returns a new array given the size
+* **dispose()** - disposes this array
